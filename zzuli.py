@@ -12,7 +12,7 @@ headers = {
 }
 data = {
     'Login.Token1': '541510020140',
-    'Login.Token2': '971012',
+    'Login.Token2': 'password',
     'goto': 'http://my.zzuli.edu.cn/loginSuccess.portal',
     'gotoOnFail': 'http://my.zzuli.edu.cn/loginFailure.portal'
 }
