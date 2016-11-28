@@ -11,7 +11,7 @@ headers = {
     'Accept-Language': 'zh-CN,zh;q=0.8'
 }
 data = {
-    'Login.Token1': '541510020140',
+    'Login.Token1': 'xuehao',
     'Login.Token2': 'password',
     'goto': 'http://my.zzuli.edu.cn/loginSuccess.portal',
     'gotoOnFail': 'http://my.zzuli.edu.cn/loginFailure.portal'
