@@ -1,3 +1,4 @@
+#验证码的识别，为tesseract，需本地安装
 import requests
 from bs4 import BeautifulSoup
 import subprocess
@@ -43,7 +44,7 @@ def get_captcha():
 def login(xuehao):
     from_data = {
         'number': xuehao,
-        'passwd': xuehao,
+        'passwd': password,
         'captcha': get_captcha(),
         'select': 'cert_no',
         'returnUrl': '',
@@ -56,4 +57,4 @@ def login(xuehao):
     session.cookies.save()
 
 if __name__ == '__main__':
-    login("541510020140")
+    login("", "")
