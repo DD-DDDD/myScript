@@ -41,7 +41,7 @@ def get_captcha():
     return captchaResponse
 
 
-def login(xuehao):
+def login(xuehao, password):
     from_data = {
         'number': xuehao,
         'passwd': password,
