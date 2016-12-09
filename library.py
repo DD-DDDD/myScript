@@ -51,7 +51,7 @@ def get_captcha():
 def login(xuehao):
     from_data = {
         'number': xuehao,
-        'passwd': "jianaosiding",
+        'passwd': password,
         'captcha': get_captcha(),
         'select': 'cert_no',
         'returnUrl': '',
@@ -72,6 +72,4 @@ def login(xuehao):
         conn.commit()
     session.cookies.save()
 if __name__ == '__main__':
-    for i in range(541510020141, 541510020161):
-        login("541510020140")
-        print(i)
+        login("")
