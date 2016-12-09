@@ -11,9 +11,9 @@ headers = {
     'Accept-Language': 'zh-CN,zh;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    'Host': '20x.19x.1x.z:8080',
-    'Origin': 'http://20x.19x.1x.x:8080',
-    'Referer': 'http://20x.19x.1x.x:8080/xxxxx/login.php',
+    'Host': '',
+    'Origin': '',
+    'Referer': '',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
     }
@@ -27,7 +27,7 @@ except:
 
 
 def get_captcha():
-    captcha_url ="http://20x.19x.1x.x:8080/xxxxxx/captcha.php"
+    captcha_url =""
     x = 0
     bin = session.get(captcha_url, headers=headers).content
     with open("" % x, "wb")as file:
@@ -55,9 +55,9 @@ def login(xuehao):
         'topage': '1',
     }
     time.sleep(2)
-    session.post("http://20x.19x.1x.x:8080/xxxxxx/redr_verify.php", data=from_data, headers=headers)
-    mylib_info = session.get("http://20x.19x.1x.x:8080/xxxxx/redr_info.php", headers=headers).content.decode("UTF-8")
-    book_info = session.post("http://20x.19x.1x.x:8080/xxxxxx/book_hist.php", headers=headers, data=data).content.decode("UTF-8")
+    session.post("", data=from_data, headers=headers)
+    mylib_info = session.get("", headers=headers).content.decode("UTF-8")
+    book_info = session.post("", headers=headers, data=data).content.decode("UTF-8")
     book_info = BeautifulSoup(book_info, "lxml")
     mylib_info = BeautifulSoup(mylib_info, "lxml")
     book = book_info.findAll("tr")
