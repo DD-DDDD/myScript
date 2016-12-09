@@ -5,7 +5,7 @@ import time
 import http.cookiejar as cookielib
 import pymysql
 
-conn = pymysql.connect(host='localhost', user='root', password='jian',
+conn = pymysql.connect(host='localhost', user='root', password='xxxx',
                        port=3306, db='scraping', charset='utf8')
 cur = conn.cursor()
 cur.execute("use scraping")
@@ -18,8 +18,8 @@ headers = {
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
     'Host': '202.196.13.8:8080',
-    'Origin': 'http://202.196.13.8:8080',
-    'Referer': 'http://202.196.13.8:8080/reader/login.php',
+    'Origin': '',
+    'Referer': '',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
     }
@@ -33,16 +33,16 @@ except:
 
 
 def get_captcha():
-    captcha_url ="http://202.196.13.8:8080/reader/captcha.php"
+    captcha_url ="captcha.php"
     x = 0
     bin = session.get(captcha_url, headers=headers).content
-    with open("d:/python/euler/%s.jpg" % x, "wb")as file:
+    with open("" % x, "wb")as file:
         file.write(bin)
         file.close()
 
-    p = subprocess.Popen(["tesseract", "d:/python/euler/0.jpg", "d:/python/euler/captcha"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    p = subprocess.Popen(["tesseract", "", ""], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     p.wait()
-    f = open("d:/python/euler/captcha.txt", "r")
+    f = open("t", "r")
     captcharesponse = f.read().replace(" ", " ").replace("\n", "")
 
     return captcharesponse
@@ -61,9 +61,9 @@ def login(xuehao):
         'topage': '1',
     }
     time.sleep(2)
-    session.post("http://202.196.13.8:8080/reader/redr_verify.php", data=from_data, headers=headers)
-    session.get("http://202.196.13.8:8080/reader/redr_info.php", headers=headers).content.decode("UTF-8")
-    book_info = session.post("http://202.196.13.8:8080/reader/book_hist.php", headers=headers, data=data).content.decode("UTF-8")
+    session.post("", data=from_data, headers=headers)
+    session.get("", headers=headers).content.decode("UTF-8")
+    book_info = session.post("", headers=headers, data=data).content.decode("UTF-8")
     soup = BeautifulSoup(book_info, "lxml")
     book_info = soup.findAll("tr")
     for i in range(1, len(book_info)):
