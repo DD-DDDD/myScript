@@ -17,9 +17,9 @@ headers = {
     'Accept-Language': 'zh-CN,zh;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    'Host': '202.196.13.8:8080',
-    'Origin': 'http://202.196.13.8:8080',
-    'Referer': 'http://202.196.13.8:8080/reader/login.php',
+    'Host': '20x.19x.1x.x:8080',
+    'Origin': 'http://20x.19x.1x.x:8080',
+    'Referer': 'http://20x.19x.1x.x:8080/xxxxxx/login.php',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
     }
@@ -36,16 +36,16 @@ except:
 
 
 def get_captcha():
-    captcha_url ="http://202.196.13.8:8080/reader/captcha.php"
+    captcha_url ="http://20x.19x.1x.x:8080/xxxxx/captcha.php"
     x = 0
     bin = session.get(captcha_url, headers=headers).content
-    with open("d:/python/euler/%s.jpg" % x, "wb")as file:
+    with open("" % x, "wb")as file:
         file.write(bin)
         file.close()
 
-    p = subprocess.Popen(["tesseract", "d:/python/euler/0.jpg", "d:/python/euler/captcha"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    p = subprocess.Popen(["tesseract", "", ""], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     p.wait()
-    f = open("d:/python/euler/captcha.txt", "r")
+    f = open("", "r")
     captchaResponse = f.read().replace(" ", " ").replace("\n", "")
 
     return captchaResponse
@@ -63,8 +63,8 @@ def login(xuehao):
         }
     time.sleep(2)
     # 暂停2秒，让程序看起来像个人在操作
-    session.post("http://202.196.13.8:8080/reader/redr_verify.php", data=from_data, headers=headers)
-    info = session.get("http://202.196.13.8:8080/reader/redr_info.php", headers=headers).content.decode("UTF-8")
+    session.post("http://20x.19x.1x.x:8080/xxxxxx/redr_verify.php", data=from_data, headers=headers)
+    info = session.get("http://20x.19x.1x.x:8080/xxxxxx/redr_info.php", headers=headers).content.decode("UTF-8")
     soup = BeautifulSoup(info, "lxml")
     mylib_info = soup.findAll("td")
     mylib_msg = soup.findAll("a", {'href': "book_lst.php"})
