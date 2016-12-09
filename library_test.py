@@ -17,9 +17,9 @@ headers = {
     'Accept-Language': 'zh-CN,zh;q=0.8',
     'Cache-Control': 'max-age=0',
     'Connection': 'keep-alive',
-    'Host': '20x.19x.1x.x:8080',
-    'Origin': 'http://20x.19x.1x.x:8080',
-    'Referer': 'http://20x.19x.1x.x:8080/xxxxxx/login.php',
+    'Host': '',
+    'Origin': '',
+    'Referer': '',
     'Upgrade-Insecure-Requests': '1',
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36',
     }
@@ -36,7 +36,7 @@ except:
 
 
 def get_captcha():
-    captcha_url ="http://20x.19x.1x.x:8080/xxxxx/captcha.php"
+    captcha_url =""
     x = 0
     bin = session.get(captcha_url, headers=headers).content
     with open("" % x, "wb")as file:
@@ -63,8 +63,8 @@ def login(xuehao):
         }
     time.sleep(2)
     # 暂停2秒，让程序看起来像个人在操作
-    session.post("http://20x.19x.1x.x:8080/xxxxxx/redr_verify.php", data=from_data, headers=headers)
-    info = session.get("http://20x.19x.1x.x:8080/xxxxxx/redr_info.php", headers=headers).content.decode("UTF-8")
+    session.post("", data=from_data, headers=headers)
+    info = session.get("", headers=headers).content.decode("UTF-8")
     soup = BeautifulSoup(info, "lxml")
     mylib_info = soup.findAll("td")
     mylib_msg = soup.findAll("a", {'href': "book_lst.php"})
