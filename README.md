@@ -13,4 +13,8 @@
 
 [zzuli.py](https://github.com/jianaosiding/spider_code/blob/master/zzuli.py):为模拟登陆学校信息门户
 
-[library_test.py](https://github.com/jianaosiding/spider_code/blob/master/library_test.py):模拟登陆学校图书馆
+[library_test.py](https://github.com/jianaosiding/spider_code/blob/master/library_test.py):模拟登陆学校图书馆,并收集个人信息
+
+[librar.py](https://github.com/jianaosiding/spider_code/blob/master/library.py):为收集个人在图书馆的借阅书目
+
+[library2.0.py](https://github.com/jianaosiding/spider_code/blob/master/library2.0.py):图书馆信息收集
