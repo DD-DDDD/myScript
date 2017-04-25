@@ -1,6 +1,7 @@
 # spider_code
 学习爬虫的记录和代码
 
+[renew.py](https://github.com/jiansoding/spider_code/blob/master/renew.py): 图书馆自动续借书籍
 [cipin.py](https://github.com/jianaosiding/spider_code/blob/master/cipin.py):词频统计
 
 [lagou_kw.py](https://github.com/jianaosiding/spider_code/blob/master/lagou_kw.py):拉勾网的数据爬取（lagou.R为爬取的数据的绘图程序）
