@@ -40,7 +40,7 @@ except:
 # 发送邮件
 def SendEmail(book_name, add="已借阅"):
     user = "1775718554@qq.com"
-    pwd  = "ltfbfvviekvfhihc"
+    pwd  = "ltfbfvviekvfhi"
     to   = "1775718554@qq.com"
 
     msg = MIMEText("{}".format(add))
@@ -65,7 +65,7 @@ def timestamp():
 
 # 验证码识别
 def get_captcha():
-    captcha_url = "http://202.196.13.8:8080/reader/captcha.php"
+    captcha_url = "http://202.1X6.13.X:8080/reader/captcha.php"
     x = 0
     bin = session.get(captcha_url, headers=headers).content
     with open("/home/jasd/python/%s.jpg" % x, "wb")as file:
@@ -83,7 +83,7 @@ def renew_book(number, check):
             'captcha': get_captcha,
             'time': timestamp(),
             }
-    test = session.get('http://202.196.13.8:8080/reader/ajax_renew.php', headers=headers, data=params_data)
+    test = session.get('http://202.1X6.13.X:8080/reader/ajax_renew.php', headers=headers, data=params_data)
     soup = etree.HTML(test.text)
     if soup.xpath('//font[@color="red"]'):
         return False
@@ -94,13 +94,13 @@ def renew_book(number, check):
 def main(xuehao):
     from_data = {
         'number': xuehao,
-        'passwd': 'jianaosiding',
+        'passwd': '',
         'captcha': get_captcha(),
         'select': 'cert_no',
         'returnurl': '',
         }
-    session.post("http://202.196.13.8:8080/reader/redr_verify.php", data=from_data, headers=headers)
-    library_info = session.get('http://202.196.13.8:8080/reader/book_lst.php', headers=headers)
+    session.post("http://202.1X6.13.X:8080/reader/redr_verify.php", data=from_data, headers=headers)
+    library_info = session.get('http://202.1X6.13.X:8080/reader/book_lst.php', headers=headers)
     soup = etree.HTML(library_info.text)
     name = [name for name in soup.xpath('//a[@class="blue"]/text()')]
     number = [number for number in soup.xpath('//td[@width="10%"]/text()')]
