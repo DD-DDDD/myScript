@@ -1,7 +1,7 @@
 # spider_code
 学习爬虫的记录和代码
 
-[renew.py](https://github.com/jiansoding/spider_code/blob/master/renew.py): 图书馆自动续借书籍
+[renew.py](https://github.com/jianaosiding/spider_code/blob/master/renew.py): 图书馆自动续借书籍
 
 [cipin.py](https://github.com/jianaosiding/spider_code/blob/master/cipin.py):词频统计
 
