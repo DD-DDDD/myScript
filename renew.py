@@ -40,7 +40,7 @@ except:
 # 发送邮件
 def SendEmail(book_name, add="已借阅"):
     user = "1775718554@qq.com"
-    pwd  = "ltfbfvviekvfhi"
+    pwd  = "*****************"
     to   = "1775718554@qq.com"
 
     msg = MIMEText("{}".format(add))
