@@ -1,22 +1,22 @@
-# spider_code
-学习爬虫的记录和代码
+### 学习爬虫的代码
+***************************************************************************************
+![img](ss.jpg)
+***************************************************************************************
+1. [renew.py](/renew.py): **模拟登录图书馆自动续借书籍，不能续借则发送email**
+2. [solve.py](/solve.py): **利用学校漏洞，抓取学生的图片**
+3. [personinfo.py](/personinfo.py): **利用学校漏洞，将学生的个人信息抓取储存(多线程)**
 
-[renew.py](https://github.com/jianaosiding/spider_code/blob/master/renew.py): 图书馆自动续借书籍
+4. [cipin.py](/cipin.py): **对权力的游戏进行词频统计，绘制词云图**
 
-[cipin.py](https://github.com/jianaosiding/spider_code/blob/master/cipin.py):词频统计
+5. [lagou_kw.py](/lagou_kw.py): **拉勾网职位信息的数据爬取（lagou.R为爬取的数据的绘图程序）**
 
-[lagou_kw.py](https://github.com/jianaosiding/spider_code/blob/master/lagou_kw.py):拉勾网的数据爬取（lagou.R为爬取的数据的绘图程序）
+6. [request_test.py](/requests_test.py): **网易公开课视频链接的爬取**
 
-[request_test.py](https://github.com/jianaosiding/spider_code/blob/master/requests_test.py):网易公开课视频链接的爬取
+7. [python_recommendation.py](/python_recommendation.py):**利用python进行计算相似度**
 
-[python_recommendation.py](https://github.com/jianaosiding/spider_code/blob/master/python_recommendation.py):利用python进行计算相似度
+8. [zzuli.py](/zzuli.py): **模拟登陆学校信息门户网站**
 
-[bachongceshi.py](https://github.com/jianaosiding/spider_code/blob/master/bachongceshi.py):百度图片的爬取
+9. [library_test.py](/library_test.py): **模拟登陆学校图书馆,并收集个人信息**
 
-[zzuli.py](https://github.com/jianaosiding/spider_code/blob/master/zzuli.py):为模拟登陆学校信息门户
 
-[library_test.py](https://github.com/jianaosiding/spider_code/blob/master/library_test.py):模拟登陆学校图书馆,并收集个人信息
 
-[librar.py](https://github.com/jianaosiding/spider_code/blob/master/library.py):为收集个人在图书馆的借阅书目
-
-[library2.0.py](https://github.com/jianaosiding/spider_code/blob/master/library2.0.py):图书馆信息收集
