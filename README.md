@@ -11,7 +11,8 @@
 4. [library.py](/library.py): **模拟登陆学校图书馆,并收集个人信息**
 5. [zzuli.py](/zzuli.py): **模拟登陆学校信息门户网站**
 6. [python_recommendation.py](/python_recommendation.py):**利用python进行计算相似度**
-7. [rename_md.py](/rename_md.py): 根据文件内容中的时间重命名文件
+7. [rename_md.py](/rename_md.py): **根据文件内容中的时间重命名文件**
+7. [stat_ref.py](/stat_ref.py): **统计参考文献年份占比**
 
 
 

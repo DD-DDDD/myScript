@@ -1,0 +1,59 @@
+[1]	张志勇, 荆军昌, 李斐, 等. 人工智能视角下的在线社交网络虚假信息检测, 传播与控制研究综述[J]. 计算机学报, 2021, 44(11): 2261-2280.
+[2]	左遥, 梁英, 毕晓迪, 等. 社会化问答网站知识传播网络推断方法[J]. 计算机学报, 2018, 41(1): 82-97.
+[3]	曹玖新, 高庆清, 夏蓉清, 等. 社交网络信息传播预测与特定信息抑制[J]. 计算机研究与发展, 2021, 58(7): 1490-1503.
+[4]	Gaskó N., Képes T., Suciu M. A., et al. Considerations about using the Shapley Value for Influence Maximization in the case of the Weighted Cascade Model[C]//2020 IEEE 18th World Symposium on Applied Machine Intelligence and Informatics (SAMI). Herlany: IEEE, 2020: 257-262.
+[5]	Bozorgi A., Samet S., Kwisthout J., et al. Community-based influence maximization in social networks under a competitive linear threshold model[J]. Knowledge-Based Systems, 2017, 134: 149-158.
+[6]	Gomez-Rodriguez M., Balduzzi D., Schölkopf B. Uncovering the temporal dynamics of diffusion networks[C]//Proceedings of the 28th International Conference on International Conference on Machine Learning. Bellevue: ACM, 2011: 561-568.
+[7]	Subbian K., Prakash B. A., Adamic L. Detecting large reshare cascades in social networks[C]//Proceedings of the 26th International Conference on World Wide Web. Perth: ACM, 2017: 597-605.
+[8]	Gomez-Rodriguez M., Leskovec J., Krause A. Inferring networks of diffusion and influence[J]. ACM Transactions on Knowledge Discovery from Data (TKDD), 2012, 5(4): 1-37.
+[9]	Bourigault S., Lagnier C., Lamprier S., et al. Learning social network embeddings for predicting information diffusion[C]//Proceedings of the 7th ACM international conference on Web Search and Data Mining. New York: ACM, 2014: 393-402.
+[10]	Bourigault S., Lamprier S., Gallinari P. Representation learning for information diffusion through social networks: an embedded cascade model[C]//Proceedings of the 9th ACM international conference on Web Search and Data Mining. San Francisco: ACM, 2016: 573-582.
+[11]	Leskovec J., Adamic L. A., Huberman B. A. The dynamics of viral marketing[J]. ACM Transactions on the Web (TWEB), 2007, 1(1): 5-es.
+[12]	Xiong Fei, Wang Ximeng, Cheng Junjun. Subtle role of latency for information diffusion in online social networks[J]. Chinese Physics B, 2016, 25(10): 108904.
+[13]	Wang Zhitao, Chen Chengyao, Li Wenjie. A sequential neural information diffusion model with structure attention[C]//Proceedings of the 27th ACM International Conference on Information and Knowledge Management. Torino: ACM, 2018: 1795-1798.
+[14]	Wang Jia, Zheng Vincent, Liu Zemin, et al. Topological recurrent neural network for diffusion prediction[C]//2017 IEEE International Conference on Data Mining (ICDM). New Orleans: IEEE, 2017: 475-484.
+[15]	Cao Qi, Shen Huawei, Cen Keting, et al. Deephawkes: Bridging the gap between prediction and understanding of information cascades[C]//Proceedings of the 2017 ACM on Conference on Information and Knowledge Management. Singapore: ACM, 2017: 1149-1158.
+[16]	Rosenblatt F. The perceptron: a probabilistic model for information storage and organization in the brain[J]. Psychological review, 1958, 65(6): 386.
+[17]	McCulloch W. S., Pitts W. A logical calculus of the ideas immanent in nervous activity[J]. The bulletin of mathematical biophysics, 1943, 5(4): 115-133.
+[18]	Nair V., Hinton G. E. Rectified Linear Units Improve Restricted Boltzmann Machines [C]//Proceedings of the 27th International Conference on International Conference on Machine Learning. Haifa: ACM, 2010:807-814.
+[19]	Franklin J. The elements of statistical learning: data mining, inference and prediction[J]. The Mathematical Intelligencer, 2005, 27(2): 83-85.
+[20]	Rumelhart D. E., Hinton G. E., Williams R. J. Learning internal representations by error propagation[R]. California Univ San Diego La Jolla Inst for Cognitive Science, 1985.
+[21]	种大双, 孙绍荣. 基于传染病模型的重大突发事件舆情传播与控制[J]. 情报理论与实践, 2018, 41(5): 104.
+[22]	Kermack W. O., McKendrick A. G. Contributions to the mathematical theory of epidemics--I. 1927[J]. Bulletin of mathematical biology, 1991, 53(1-2): 33-55.
+[23]	Werbos P. J. Backpropagation through time: what it does and how to do it[J]. Proceedings of the IEEE, 1990, 78(10): 1550-1560.
+[24]	Bengio Y., Simard P., Frasconi P. Learning long-term dependencies with gradient descent is difficult[J]. IEEE transactions on neural networks, 1994, 5(2): 157-166.
+[25]	HOCHREITER S. Gradient flow in recurrent nets: the difficulty of learning long-term dependencies[J]. A Field Guide to Dynamical Recurrent Neural Networks, 2001: 237-244.
+[26]	Cho K., Van Merriënboer B., Gulcehre C., et al. Learning phrase representations using RNN encoder-decoder for statistical machine translation[C]//Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing. Doha: ACL, 2014: 1724-1734.
+[27]	Yamak P. T., Li Yujian, Gadosey P. K. A comparison between arima, lstm, and gru for time series forecasting[C]//Proceedings of the 2019 2nd International Conference on Algorithms, Computing and Artificial Intelligence. Sanya: ACM, 2019: 49-55.
+[28]	Dhillon A., Verma G. K. Convolutional neural network: a review of models, methodologies and applications to object detection[J]. Progress in Artificial Intelligence, 2020, 9(2): 85-112.
+[29]	Tang G., Müller M., Gonzales A. R., et al. Why Self-Attention? A Targeted Evaluation of Neural Machine Translation Architectures[C]//Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing. Brussels: ACL, 2018: 4263-4272.
+[30]	Vaswani A., Shazeer N., Parmar N., et al. Attention is all you need[C]//Advances in neural information processing systems. California: NIPS, 2017: 5998-6008.
+[31]	Stai E., Milaiou E., Karyotis V., et al. Temporal dynamics of information diffusion in twitter: Modeling and experimentation[J]. IEEE Transactions on Computational Social Systems, 2018, 5(1): 256-264.
+[32]	Kuhnle A., Alim M. A., Li Xiang, et al. Multiplex influence maximization in online social networks with heterogeneous diffusion models[J]. IEEE Transactions on Computational Social Systems, 2018, 5(2): 418-429.
+[33]	Matsubara Y., Sakurai Y., Prakash B. A., et al. Nonlinear dynamics of information diffusion in social networks[J]. ACM Transactions on the Web (TWEB), 2017, 11(2): 1-40.
+[34]	Jiang Yichuan, Jiang J. C. Understanding social networks from a multiagent perspective[J]. IEEE Transactions on Parallel and Distributed Systems, 2013, 25(10): 2743-2759.
+[35]	Li Huacheng, Xia Chunhe, Wang Tianbo, et al. Capturing Dynamics of Information Diffusion in SNS: A Survey of Methodology and Techniques[J]. ACM Computing Surveys (CSUR), 2021, 55(1): 1-51.
+[36]	Sagheer A., Kotb M. Time series forecasting of petroleum production using deep LSTM recurrent networks[J]. Neurocomputing, 2019, 323: 203-213.
+[37]	Ding Min, Zhou Hao, Xie Hua, et al. A gated recurrent unit neural networks based wind speed error correction model for short-term wind power forecasting[J]. Neurocomputing, 2019, 365: 54-61.
+[38]	Yang Cheng, Sun Maosong, Liu Haoran, et al. Neural diffusion model for microscopic cascade study[J]. IEEE Transactions on Knowledge and Data Engineering, 2019, 33(3): 1128-1139.
+[39]	Wang Zhitao, Li Wenjie. Hierarchical Diffusion Attention Network[C]//Proceedings of the 28th International Joint Conference on Artificial Intelligence. Macao: AAAI, 2019: 3828-3834.
+[40]	Wang Hongwei, Zhang Fuzheng, Zhang Mengdi, et al. Knowledge-aware graph neural networks with label smoothness regularization for recommender systems[C]//Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. Anchorage: ACM, 2019: 968-977.
+[41]	Opsahl T., Panzarasa P. Clustering in weighted networks[J]. Social networks, 2009, 31(2): 155-163.
+[42]	Du Nan, Dai Hanjun, Trivedi R., et al. Recurrent marked temporal point processes: Embedding event history to vector[C]//Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery & Data Mining. San Francisco: ACM, 2016: 1555-1564.
+[43]	Hu Wenjian, Singh K. K., Xiao Fanyi, et al. Who will share my image? Predicting the content diffusion path in online social networks[C]//Proceedings of the eleventh ACM International Conference on Web Search and Data Mining. Marina Del Rey: ACM, 2018: 252-260.
+[44]	Dey R., Salem F. M. Gate-variants of gated recurrent unit (GRU) neural networks[C]//2017 IEEE 60th International Midwest Symposium on Circuits and Systems (MWSCAS). Boston: IEEE, 2017: 1597-1600.
+[45]	Wang Zhitao, Chen Chengyao, Li Wenjie. Attention network for information diffusion prediction[C]//Companion Proceedings of the The Web Conference 2018. Lyon: ACM, 2018: 65-66.
+[46]	Wang Yongqing, Shen Huawei, Liu Shenghua, et al. Cascade Dynamics Modeling with Attention-based Recurrent Neural Network[C]//Proceedings of the 26th International Joint Conference on Artificial Intelligence. Melbourne: AAAI 2017: 2985-2991.
+[47]	Chen Xueqin, Zhang Kunpeng, Zhou Fan, et al. Information cascades modeling via deep multi-task learning[C]//Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval. Paris: ACM, 2019: 885-888.
+[48]	Zhou Fan, Xu Xovee, Trajcevski G., et al. A survey of information cascade analysis: Models, predictions, and recent advances[J]. ACM Computing Surveys (CSUR), 2021, 54(2): 1-36.
+[49]	Wang Zhitao, Chen Chengyao, Li Wenjie. Information diffusion prediction with network regularized role-based user representation learning[J]. ACM Transactions on Knowledge Discovery from Data (TKDD), 2019, 13(3): 1-23.
+[50]	Shaw P., Uszkoreit J., Vaswani A. Self-Attention with Relative Position Representations[C]//Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. New Orleans: ACL, 2018: 464-468.
+[51]	Li Jiacheng, Wang Yujie, McAuley J. Time interval aware self-attention for sequential recommendation[C]//Proceedings of the 13th International Conference on Web Search and Data Mining. Houston: ACM, 2020: 322-330.
+[52]	Song Weiping, Shi Chence, Xiao Zhiping, et al. Autoint: Automatic feature interaction learning via self-attentive neural networks[C]//Proceedings of the 28th ACM International Conference on Information and Knowledge Management. Beijing: ACM, 2019: 1161-1170.
+[53]	Wang Jingyi, Liu Qiang, Liu Zhaocheng, et al. Towards accurate and interpretable sequential prediction: A cnn & attention-based feature extractor[C]//Proceedings of the 28th ACM International Conference on Information and Knowledge Management. Beijing: ACM, 2019: 1703-1712.
+[54]	Yuan Fajie, Karatzoglou A., Arapakis I., et al. A simple convolutional generative network for next item recommendation[C]//Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining. Melbourne: ACM, 2019: 582-590.
+[55]	Lv Fuyu, Jin Taiwei, Yu Changlong, et al. SDM: Sequential deep matching model for online large-scale recommender system[C]//Proceedings of the 28th ACM International Conference on Information and Knowledge Management. Beijing: ACM, 2019: 2635-2643.
+[56]	Song Weiping, Xiao Zhiping, Wang Yifan, et al. Session-based social recommendation via dynamic graph attention networks[C]//Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining. Melbourne: ACM, 2019: 555-563.
+[57]	Duchi J., Hazan E., Singer Y. Adaptive subgradient methods for online learning and stochastic optimization[J]. Journal of machine learning research, 2011, 12(7): 2121-2159.
+[58]	Wu Le, Sun Peijie, Fu Yanjie, et al. A neural influence diffusion model for social recommendation[C]//Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval. Pairs: ACM, 2019: 235-244.
+[59]	Wu Liang, Liu Huan. Tracing fake-news footprints: Characterizing social media messages by how they propagate[C]//Proceedings of the Eleventh ACM International Conference on Web Search and Data Mining. Maring Del Rey: ACM, 2018: 637-645.
