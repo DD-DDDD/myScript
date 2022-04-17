@@ -1,6 +1,6 @@
 import re
 
-ref_file = open('my.bin', 'r', encoding='utf8')
+ref_file = open('../my.bin', 'r', encoding='utf8')
 
 ref_lines = ref_file.readlines()
 year_list = {}
