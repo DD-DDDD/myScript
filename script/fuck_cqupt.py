@@ -2,6 +2,7 @@ import smtplib
 import time
 from email.mime.text import MIMEText
 
+from lxml import etree
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
@@ -11,9 +12,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # 发送邮件
 def sendEmail(message, add="状态变更通知"):
-    user = "xxxxx@qq.com"
-    pwd = "xxxxxx"
-    to = "xxxxx"
+    user = "xxxxxx"
+    pwd = "xxxxx"
+    to = "xxxxxxx"
 
     msg = MIMEText("{}".format(add))
     msg["Subject"] = message
@@ -66,13 +67,15 @@ def get_result(driver):
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, "ctl00_contentParent_dgData")))
 
-        table_id = driver.find_element(By.ID, 'ctl00_contentParent_dgData')
-        tbody = table_id.find_element_by_tag_name('tbody')
-        rows = tbody.find_elements(By.TAG_NAME, "tr")
-        one_mark = rows[1].find_elements(By.TAG_NAME, "td")[4].text
-        one_result = rows[1].find_elements(By.TAG_NAME, "td")[5].text
-        two_mark = rows[2].find_elements(By.TAG_NAME, "td")[4].text
-        two_result = rows[2].find_elements(By.TAG_NAME, "td")[5].text
+        soup = etree.HTML(driver.page_source)
+        rows = soup.xpath('//*[@id="ctl00_contentParent_dgData"]/tbody/tr')
+        one = rows[1].xpath('td/text()')
+        one_mark = one[4].strip()
+        one_result = one[5].strip()
+        two = rows[2].xpath('td/text()')
+        two_mark = two[4].strip()
+        two_result = two[5].strip()
+
         print('--' * 20)
         print(f'第一行成绩: {one_mark}')
         print(f'第一行结果: {one_result}')
@@ -80,17 +83,17 @@ def get_result(driver):
         print(f'第二行结果: {two_result}')
 
         if one_mark != '' and one_result != '':
-            sendEmail('第一行结果出了!!!')
+            sendEmail('第一行结果出了!!!\n成绩: {}, 结果: {}'.format(one_mark, one_result))
         else:
             print('第一行结果没变')
-        if two_mark != '' and two_result != '':
-            sendEmail('第二行结果出!!!')
+        if two_mark != '良好' and two_result != '同意答辩':
+            sendEmail('第二行结果出了!!!\n成绩: {}, 结果: {}'.format(two_mark, two_result))
         else:
             print('第二行结果没变')
 
         print('--' * 20)
         return '解析正确'
-    except :
+    except:
         print('解析评审错误')
         # 程序错误发送邮件通知
         sendEmail('程序解析错误，检查', '程序错误')
@@ -126,6 +129,7 @@ if __name__ == '__main__':
     firefox_options.add_argument('--headless')
     firefox_options.add_argument('--disable-gpu')
     driver = webdriver.Firefox(executable_path=firefox_path, options=firefox_options)
+    # driver = webdriver.Firefox(executable_path=firefox_path)
 
     d = login(un, pwd, driver)
 
