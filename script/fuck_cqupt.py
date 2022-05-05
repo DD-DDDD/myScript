@@ -12,8 +12,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # 发送邮件
 def sendEmail(message, add="状态变更通知"):
+    # 邮箱地址
     user = "xxxxxx"
+    # 授权码
     pwd = "xxxxx"
+    # 邮箱地址
     to = "xxxxxxx"
 
     msg = MIMEText("{}".format(add))

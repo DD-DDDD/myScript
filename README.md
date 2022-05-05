@@ -5,7 +5,7 @@
 3. [use_bug_get_student_info.py](/script/use_bug_get_student_info.py): **利用学校漏洞，抓取学生的个人信息储存Mongodb**
 4. [login_library.py](/script/login_library.py): **模拟登陆学校图书馆,并收集个人信息**
 5. [stat_ref.py](/script/stat_ref.py): **统计参考文献年份占比**
-6. [fuck_cqupt.py](/fuck_cqupt.py): 监控盲审结果
+6. [fuck_cqupt.py](/script/fuck_cqupt.py): **监控盲审结果**
 
 
 
