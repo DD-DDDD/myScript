@@ -97,7 +97,7 @@ def get_result(driver):
             sendEmail('第一行结果出了!!! 成绩: {}, 结果: {}'.format(first_mark, first_result))
         else:
             print('第一行结果没变')
-        if second_mark != '良好' and second_result != '同意答辩':
+        if second_mark != '' and second_result != '':
             sendEmail('第二行结果出了!!! 成绩: {}, 结果: {}'.format(second_mark, second_result))
         else:
             print('第二行结果没变')
