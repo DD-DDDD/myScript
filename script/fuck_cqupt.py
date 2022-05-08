@@ -1,13 +1,12 @@
-import smtplib
 import time
-from email.mime.text import MIMEText
-
+import smtplib
 from lxml import etree
 from selenium import webdriver
+from email.mime.text import MIMEText
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 BAD = '解析失败'
 GOOD = '解析成功'
@@ -80,25 +79,26 @@ def get_result(driver):
         # 获取表格数据
         soup = etree.HTML(driver.page_source)
         rows = soup.xpath('//*[@id="ctl00_contentParent_dgData"]/tbody/tr')
-        one = rows[1].xpath('td/text()')
-        one_mark = one[4].strip()
-        one_result = one[5].strip()
-        two = rows[2].xpath('td/text()')
-        two_mark = two[4].strip()
-        two_result = two[5].strip()
+
+        first = rows[1].xpath('td/text()')
+        first_mark = one[4].strip()
+        first_result = one[5].strip()
+        second = rows[2].xpath('td/text()')
+        second_mark = two[4].strip()
+        second_result = two[5].strip()
 
         print('--' * 20)
-        print(f'第一行成绩: {one_mark}')
-        print(f'第一行结果: {one_result}')
-        print(f'第二行成绩: {two_mark}')
-        print(f'第二行结果: {two_result}')
+        print(f'第一行成绩: {first_mark}')
+        print(f'第一行结果: {first_result}')
+        print(f'第二行成绩: {second_mark}')
+        print(f'第二行结果: {second_result}')
 
-        if one_mark != '' and one_result != '':
-            sendEmail('第一行结果出了!!! 成绩: {}, 结果: {}'.format(one_mark, one_result))
+        if first_mark!= '' and first_result != '':
+            sendEmail('第一行结果出了!!! 成绩: {}, 结果: {}'.format(first_mark, first_result))
         else:
             print('第一行结果没变')
-        if two_mark != '良好' and two_result != '同意答辩':
-            sendEmail('第二行结果出了!!! 成绩: {}, 结果: {}'.format(two_mark, two_result))
+        if second_mark != '良好' and second_result != '同意答辩':
+            sendEmail('第二行结果出了!!! 成绩: {}, 结果: {}'.format(second_mark, second_result))
         else:
             print('第二行结果没变')
 
