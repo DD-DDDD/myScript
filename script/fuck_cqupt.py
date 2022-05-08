@@ -24,8 +24,8 @@ def sendEmail(message, add="状态变更通知"):
     msg["From"] = user
     msg["To"] = to
 
+    s = smtplib.SMTP_SSL("smtp.qq.com", 465)
     try:
-        s = smtplib.SMTP_SSL("smtp.qq.com", 465)
         s.login(user, pwd)
         s.sendmail(user, to, msg.as_string())
         print('邮件发送成功')
