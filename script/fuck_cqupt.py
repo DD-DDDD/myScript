@@ -9,13 +9,14 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+BAD = '解析失败'
+GOOD = '解析成功'
 
-# 发送邮件
 def sendEmail(message, add="状态变更通知"):
     # 邮箱地址
     user = "xxxxxx"
     # 授权码
-    pwd = "xxxxx"
+    pwd = "xxxxxx"
     # 邮箱地址
     to = "xxxxxxx"
 
@@ -28,23 +29,26 @@ def sendEmail(message, add="状态变更通知"):
         s = smtplib.SMTP_SSL("smtp.qq.com", 465)
         s.login(user, pwd)
         s.sendmail(user, to, msg.as_string())
-        s.quit()
         print('邮件发送成功')
         return True
     except:
         print('邮件发送失败')
         return False
+    finally:
+        s.quit()
 
 
 def get_result(driver):
     try:
         driver.refresh()
+        # 切换 frame
         driver.switch_to_frame('topmenuFrame')
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, "DataList1_ctl02_hykMenu")))
 
         driver.find_element_by_id('DataList1_ctl02_hykMenu').click()
 
+        # 切换 frame
         driver.switch_to_default_content()
         driver.switch_to_frame('MenuFrame')
         WebDriverWait(driver, 30).until(
@@ -52,6 +56,7 @@ def get_result(driver):
 
         driver.find_element_by_id('tree0_4_a').click()
 
+        # 切换 frame
         driver.switch_to_default_content()
         driver.switch_to_frame('PageFrame')
         WebDriverWait(driver, 30).until(
@@ -60,16 +65,19 @@ def get_result(driver):
         # 查看详情
         driver.find_element_by_id('ctl00_contentParent_dgData_ctl02_hykEdit').click()
 
+        # 切换 frame
         driver.switch_to_default_content()
         driver.switch_to_frame('psEdit')
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.CLASS_NAME, "tabs")))
 
         driver.find_element_by_xpath('//div[@class="tabs-wrap"]/ul/li[6]/a').click()
+        # 切换 frame
         driver.switch_to_frame('lwpsInfo')
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.ID, "ctl00_contentParent_dgData")))
 
+        # 获取表格数据
         soup = etree.HTML(driver.page_source)
         rows = soup.xpath('//*[@id="ctl00_contentParent_dgData"]/tbody/tr')
         one = rows[1].xpath('td/text()')
@@ -86,21 +94,22 @@ def get_result(driver):
         print(f'第二行结果: {two_result}')
 
         if one_mark != '' and one_result != '':
-            sendEmail('第一行结果出了!!!\n成绩: {}, 结果: {}'.format(one_mark, one_result))
+            sendEmail('第一行结果出了!!! 成绩: {}, 结果: {}'.format(one_mark, one_result))
         else:
             print('第一行结果没变')
         if two_mark != '良好' and two_result != '同意答辩':
-            sendEmail('第二行结果出了!!!\n成绩: {}, 结果: {}'.format(two_mark, two_result))
+            sendEmail('第二行结果出了!!! 成绩: {}, 结果: {}'.format(two_mark, two_result))
         else:
             print('第二行结果没变')
 
         print('--' * 20)
-        return '解析正确'
+        return GOOD
     except:
         print('解析评审错误')
-        # 程序错误发送邮件通知
         sendEmail('程序解析错误，检查', '程序错误')
-        return '解析错误'
+        return BAD
+    finally:
+        driver.quit()
 
 
 def login(username, password, dr):
@@ -124,7 +133,9 @@ def login(username, password, dr):
 
 
 if __name__ == '__main__':
+    # 统一认证码
     un = 'xxxxx'
+    # 密码
     pwd = 'xxxxx'
 
     firefox_path = 'driver/geckodriver.exe'
@@ -132,20 +143,17 @@ if __name__ == '__main__':
     firefox_options.add_argument('--headless')
     firefox_options.add_argument('--disable-gpu')
     driver = webdriver.Firefox(executable_path=firefox_path, options=firefox_options)
-    # driver = webdriver.Firefox(executable_path=firefox_path)
 
     d = login(un, pwd, driver)
 
     # 获取学位论文评审结果
     print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
     status_str = get_result(d)
-    if status_str == '解析错误':
-        d.quit()
-        exit(0)
     while True:
+        if status_str == BAD:
+            # 退出程序
+            break
+        # 三分刷新一次网页
         time.sleep(3 * 60)
         print(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
         status_str = get_result(d)
-        if status_str == '解析错误':
-            d.quit()
-            exit(0)
